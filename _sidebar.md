@@ -2,8 +2,8 @@
 
 - 💻 计算机科学
   - [总览](computer-science/)
-  - [CS61A](computer-science/UCB-CS61A/)
-    - [函数与环境](computer-science/UCB-CS61A/Function&Environment.md)
+  - [CS61A](computer-science/UCB%20CS61A/)
+    - [函数与环境](computer-science/UCB%20CS61A/Function&Environment.md)
 
 - 📚 英文
   - [英文总览](English/)
@@ -12,3 +12,4 @@
 
 - 📐 数学
   - [数学总览](math/)
+
