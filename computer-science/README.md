@@ -4,8 +4,12 @@
 
 ---
 
-## 🎓 课程
+## 🎓 课程与内容
 
-- 🐍 [CS61A · Structure and Interpretation of Computer Programs](cs61a/)
-- 🧠 [MIT · The Missing Semester](ms/)
-- 🧱 
+- 🐍 [UC Berkeley CS61A - Structure and Interpretation of Computer Programs](UCB%20CS61A/)
+- 🧠 [微服务与系统设计](ms/)
+
+---
+
+> 持续更新中...
+ 
