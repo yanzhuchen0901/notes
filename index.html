@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 
 <head>
@@ -6,93 +6,62 @@
     <title>学习笔记</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Docsify -->
+    <!-- Docsify Theme CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+
+    <!-- Docsify Configuration -->
     <script>
         window.$docsify = {
-            name: '📒 学习笔记',
+            name: ' 学习笔记',
             repo: '',
             loadSidebar: true,
-            loadNavbar: false,
+            loadNavbar: true,
             subMaxLevel: 3,
             homepage: 'README.md',
-            nav: [{
-                title: '首页',
-                path: '/'
-            }, {
-                title: '个人主页',
-                path: 'https://yanzhuchen0901.github.io/yanzhuchen0901.gtihub.io/',
-                target: '_blank'
-            }]
+            coverpage: false,
+            auto2top: true
         }
     </script>
 
-    <!-- Custom styles for white paper black text -->
+    <!-- Custom Theme Override Styles -->
     <style>
          :root {
-            --primary-color: #222;
+            --primary-color: #0066cc;
             --text-color: #222;
             --background: #ffffff;
             --border-color: #eee;
             --link-color: #0066cc;
-            --link-text-decoration: underline;
         }
         
-        * {
-            box-sizing: border-box;
-        }
-        
-        html,
         body {
-            margin: 0;
-            padding: 0;
             background-color: #ffffff;
             color: #222;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        }
-        
-        body {
-            overflow: hidden;
         }
         
         .app-nav {
             background-color: #ffffff;
             border-bottom: 1px solid #ddd;
-            padding: 0;
-            height: auto;
         }
         
         .app-nav li a {
             color: #222;
-            padding: 8px 16px;
+            font-weight: 500;
         }
         
         .app-nav li a:hover {
             color: #0066cc;
-            background-color: #f5f5f5;
+            background-color: transparent;
         }
         
         .sidebar {
-            background-color: #fafafa;
-            border-right: 1px solid #ddd;
+            background-color: #f9f9f9;
             width: 250px !important;
-        }
-        
-        .sidebar-toggle {
-            background-color: #f5f5f5;
-        }
-        
-        .sidebar ul {
-            padding: 0;
-        }
-        
-        .sidebar ul li {
-            list-style: none;
         }
         
         .sidebar ul li a {
             color: #222;
-            padding-left: 16px;
-            display: block;
+            border-left: 3px solid transparent;
+            padding-left: 13px !important;
         }
         
         .sidebar ul li a:hover {
@@ -102,18 +71,15 @@
         
         .sidebar ul li.active>a {
             color: #0066cc;
-            border-right: 3px solid #0066cc;
+            border-left: 3px solid #0066cc;
             background-color: #f0f0f0;
-        }
-        
-        .main {
-            background-color: #ffffff;
+            font-weight: 600;
         }
         
         .markdown-section {
             background-color: #ffffff;
             color: #222;
-            padding: 30px;
+            padding: 30px 40px;
             max-width: 900px;
         }
         
@@ -124,25 +90,22 @@
         .markdown-section h5,
         .markdown-section h6 {
             color: #222;
-            border-bottom-color: #ddd;
             font-weight: 600;
+            border-bottom-color: #ddd;
         }
         
         .markdown-section h1 {
             border-bottom: 2px solid #ddd;
             padding-bottom: 10px;
-            margin-top: 0;
         }
         
         .markdown-section a {
             color: #0066cc;
-            text-decoration: none;
-            border-bottom: 1px solid #0066cc;
-            transition: all 0.3s;
+            text-decoration: underline;
         }
         
         .markdown-section a:hover {
-            background-color: #e3f2fd;
+            opacity: 0.8;
         }
         
         .markdown-section code {
@@ -151,40 +114,22 @@
             padding: 2px 6px;
             border-radius: 3px;
             border: 1px solid #e0e0e0;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9em;
         }
         
         .markdown-section pre {
             background-color: #f5f5f5;
-            color: #222;
             border: 1px solid #ddd;
             border-radius: 4px;
-            padding: 12px;
-            overflow-x: auto;
-        }
-        
-        .markdown-section pre code {
-            background-color: transparent;
-            color: #222;
-            padding: 0;
-            border: none;
-            border-radius: 0;
         }
         
         .markdown-section blockquote {
-            border-left: 4px solid #0066cc;
+            border-left-color: #0066cc;
             color: #666;
-            padding-left: 12px;
-            margin-left: 0;
             background-color: #f9f9f9;
-            padding: 12px 0 12px 12px;
         }
         
         .markdown-section table {
             border-collapse: collapse;
-            width: 100%;
-            margin: 16px 0;
         }
         
         .markdown-section table tr {
@@ -198,34 +143,12 @@
         .markdown-section table th,
         .markdown-section table td {
             border: 1px solid #ddd;
-            padding: 8px 12px;
-            text-align: left;
+            padding: 10px;
         }
         
         .markdown-section table th {
             background-color: #f0f0f0;
             font-weight: 600;
-        }
-        
-        .markdown-section ul,
-        .markdown-section ol {
-            padding-left: 24px;
-        }
-        
-        .markdown-section li {
-            margin: 6px 0;
-        }
-        
-        .markdown-section img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-            margin: 12px 0;
-        }
-        /* 防止内容被遮挡 */
-        
-        .content {
-            padding-top: 0 !important;
         }
     </style>
 </head>
