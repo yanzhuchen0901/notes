@@ -4,4 +4,4 @@
 
 ## 📋 学习内容
 
-- [翻译与写作](translation_and_writing1.md) - CET-6 翻译和作文练习
+- [翻译与写作](English/CET-6/translation_and_writing1.md) - CET-6 翻译和作文练习

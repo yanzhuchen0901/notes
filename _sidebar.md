@@ -4,6 +4,8 @@
   - [计算机科学总览](computer-science/)
   - [UC Berkeley CS61A](computer-science/UCB%20CS61A/)
     - [函数与环境](computer-science/UCB%20CS61A/Function&Environment.md)
+    - [生成器](computer-science/UCB%20CS61A/Generator.md)
+    - [面向对象](computer-science/UCB%20CS61A/Object-Oriented.md)
   - [微服务与系统设计](computer-science/ms/)
 
 - 📚 英文学习

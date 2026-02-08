@@ -1,0 +1,202 @@
+:root {
+    --primary-color: #1abc9c;
+    --text-color: #ecf0f1;
+    --background: #1e1e1e;
+    --border-color: #333;
+    --link-color: #3498db;
+}
+
+
+/* 全局强制文字为白色（覆盖所有元素） */
+
+html,
+body,
+body * {
+    color: #ffffff !important;
+}
+
+
+/* 全局颜色请通过明确选择器设置，避免使用通配符覆盖导致冲突 */
+
+html,
+body {
+    background-color: #1e1e1e;
+    color: #ecf0f1;
+}
+
+.app-nav {
+    background-color: #2a2a2a;
+    border-bottom: 1px solid #444;
+}
+
+.app-nav li a {
+    color: #ecf0f1;
+    font-weight: 500;
+}
+
+.app-nav li a:hover {
+    color: #3498db;
+    background-color: transparent;
+}
+
+.sidebar {
+    background-color: #262626;
+    width: 250px !important;
+}
+
+.sidebar ul li a {
+    color: #ffffff;
+    border-left: 3px solid transparent;
+    padding-left: 13px !important;
+}
+
+.sidebar ul li a:hover {
+    color: #3498db;
+    background-color: #333;
+}
+
+.sidebar ul li.active>a {
+    color: #3498db;
+    border-left: 3px solid #3498db;
+    background-color: #333;
+    font-weight: 600;
+}
+
+.markdown-section {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 30px 40px;
+    max-width: 900px;
+}
+
+.markdown-section h1,
+.markdown-section h2,
+.markdown-section h3,
+.markdown-section h4,
+.markdown-section h5,
+.markdown-section h6 {
+    color: #ffffff;
+    font-weight: 600;
+    border-bottom-color: #555;
+}
+
+.markdown-section h1 {
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+}
+
+.markdown-section a {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+.markdown-section a:hover {
+    opacity: 0.8;
+}
+
+.markdown-section code {
+    background-color: #2a2a2a;
+    color: #f1c40f;
+    padding: 2px 6px;
+    border-radius: 3px;
+    border: 1px solid #444;
+}
+
+.markdown-section pre {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 4px;
+}
+
+.markdown-section blockquote {
+    border-left-color: #3498db;
+    color: #ffffff;
+    background-color: #262626;
+}
+
+.markdown-section table {
+    border-collapse: collapse;
+}
+
+.markdown-section table tr {
+    border-bottom: 1px solid #444;
+}
+
+.markdown-section table tr:nth-child(2n) {
+    background-color: #262626;
+}
+
+.markdown-section table th,
+.markdown-section table td {
+    border: 1px solid #444;
+    padding: 10px;
+    color: #ecf0f1;
+}
+
+.markdown-section table th {
+    background-color: #2a2a2a;
+    font-weight: 600;
+    color: #ecf0f1;
+}
+
+.main {
+    background-color: #1e1e1e;
+}
+
+.content {
+    background-color: #1e1e1e;
+}
+
+
+/* 禁用标题锚点链接效果 */
+
+.markdown-section h1 a,
+.markdown-section h2 a,
+.markdown-section h3 a,
+.markdown-section h4 a,
+.markdown-section h5 a,
+.markdown-section h6 a {
+    text-decoration: none;
+    color: #ffffff;
+    cursor: default;
+    pointer-events: none;
+}
+
+.markdown-section h1 a:hover,
+.markdown-section h2 a:hover,
+.markdown-section h3 a:hover,
+.markdown-section h4 a:hover,
+.markdown-section h5 a:hover,
+.markdown-section h6 a:hover {
+    color: #ffffff;
+    opacity: 1;
+}
+
+
+/* 侧栏切换按钮样式（暗色/半透明背景） */
+
+.sidebar-toggle,
+.sidebar-toggle a,
+.sidebar-toggle button {
+    background-color: rgba(0, 0, 0, 0.35) !important;
+    color: #ffffff !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.sidebar-toggle:hover,
+.sidebar-toggle:focus {
+    background-color: rgba(0, 0, 0, 0.55) !important;
+}
+
+.sidebar-toggle .lines,
+.sidebar-toggle .lines span {
+    background-color: #ffffff !important;
+}
+
+
+/* 可选： 如果想要纯黑或灰色背景，可改为下面任一规则：
+.sidebar-toggle { background-color: #000000 !important; }
+.sidebar-toggle { background-color: rgba(0,0,0,0) !important; } 透明
+.sidebar-toggle { background-color: #444444 !important; } 灰色
+*/

@@ -9,148 +9,54 @@
     <!-- Docsify Theme CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
 
+    <!-- Custom Theme Override Styles -->
+    <link rel="stylesheet" href="style.css">
+
     <!-- Docsify Configuration -->
     <script>
         window.$docsify = {
             name: ' 学习笔记',
             repo: '',
-            loadSidebar: true,
-            loadNavbar: true,
+            loadSidebar: '_sidebar.md',
+            loadNavbar: '_navbar.md',
             subMaxLevel: 3,
             homepage: 'README.md',
             coverpage: false,
-            auto2top: true
+            auto2top: true,
+            disableAnchors: true,
+            markdown: {
+                breaks: true
+            }
         }
-    </script>
 
-    <!-- Custom Theme Override Styles -->
-    <style>
-         :root {
-            --primary-color: #0066cc;
-            --text-color: #222;
-            --background: #ffffff;
-            --border-color: #eee;
-            --link-color: #0066cc;
+        // 初始化完成后禁用标题链接
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', disableHeadingLinks);
+        } else {
+            disableHeadingLinks();
         }
-        
-        body {
-            background-color: #ffffff;
-            color: #222;
+
+        function disableHeadingLinks() {
+            const headingLinks = document.querySelectorAll('.markdown-section h1 a, .markdown-section h2 a, .markdown-section h3 a, .markdown-section h4 a, .markdown-section h5 a, .markdown-section h6 a');
+            headingLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                });
+            });
         }
-        
-        .app-nav {
-            background-color: #ffffff;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        .app-nav li a {
-            color: #222;
-            font-weight: 500;
-        }
-        
-        .app-nav li a:hover {
-            color: #0066cc;
-            background-color: transparent;
-        }
-        
-        .sidebar {
-            background-color: #f9f9f9;
-            width: 250px !important;
-        }
-        
-        .sidebar ul li a {
-            color: #222;
-            border-left: 3px solid transparent;
-            padding-left: 13px !important;
-        }
-        
-        .sidebar ul li a:hover {
-            color: #0066cc;
-            background-color: #f0f0f0;
-        }
-        
-        .sidebar ul li.active>a {
-            color: #0066cc;
-            border-left: 3px solid #0066cc;
-            background-color: #f0f0f0;
-            font-weight: 600;
-        }
-        
-        .markdown-section {
-            background-color: #ffffff;
-            color: #222;
-            padding: 30px 40px;
-            max-width: 900px;
-        }
-        
-        .markdown-section h1,
-        .markdown-section h2,
-        .markdown-section h3,
-        .markdown-section h4,
-        .markdown-section h5,
-        .markdown-section h6 {
-            color: #222;
-            font-weight: 600;
-            border-bottom-color: #ddd;
-        }
-        
-        .markdown-section h1 {
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 10px;
-        }
-        
-        .markdown-section a {
-            color: #0066cc;
-            text-decoration: underline;
-        }
-        
-        .markdown-section a:hover {
-            opacity: 0.8;
-        }
-        
-        .markdown-section code {
-            background-color: #f5f5f5;
-            color: #d63384;
-            padding: 2px 6px;
-            border-radius: 3px;
-            border: 1px solid #e0e0e0;
-        }
-        
-        .markdown-section pre {
-            background-color: #f5f5f5;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        
-        .markdown-section blockquote {
-            border-left-color: #0066cc;
-            color: #666;
-            background-color: #f9f9f9;
-        }
-        
-        .markdown-section table {
-            border-collapse: collapse;
-        }
-        
-        .markdown-section table tr {
-            border-bottom: 1px solid #ddd;
-        }
-        
-        .markdown-section table tr:nth-child(2n) {
-            background-color: #f9f9f9;
-        }
-        
-        .markdown-section table th,
-        .markdown-section table td {
-            border: 1px solid #ddd;
-            padding: 10px;
-        }
-        
-        .markdown-section table th {
-            background-color: #f0f0f0;
-            font-weight: 600;
-        }
-    </style>
+
+        // 监听页面内容变化，重新禁用新添加的标题链接
+        const observer = new MutationObserver(() => {
+            disableHeadingLinks();
+        });
+
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true
+        });
+    </script>
 </head>
 
 <body>
