@@ -34,6 +34,7 @@
 ## 📖 更新日志
 
 - 2026-02-07: 创建学习笔记仓库，完成初始框架搭建
+- 2026-02-08: polish the color problem of the website, make the text white and the background black, and make the website more beautiful.
 
 ---
 
