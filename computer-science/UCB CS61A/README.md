@@ -9,6 +9,7 @@
 ---
 
 ## 📘 内容索引
+- [python basic](/computer-science/UCB%20CS61A/python.md)
 - [Function & Environment](/computer-science/UCB%20CS61A/Function&Environment.md)
 - [Generator](/computer-science/UCB%20CS61A/Generator.md)
 - [Object-Oriented Programming](/computer-science/UCB%20CS61A/Object-Oriented.md)
