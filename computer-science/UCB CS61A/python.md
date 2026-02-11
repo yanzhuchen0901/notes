@@ -143,3 +143,45 @@ sys.setrecursionlimit(2000) # 手动提升递归深度限制
 | `any(it)` | 逻辑“或”：任一为 True 则返回 True | `any([0, 0, 1])` -> `True` |
 | `min/max(it, key=f)` | 根据规则取最值 | `max(['a', 'abc'], key=len)` -> `'abc'` |
 | `sum(it, start=0)` | 序列求和 | `sum([1, 2, 3])` -> `6` |
+
+# 07_Dictionary_Advanced_Examples.md
+
+### 7.2 进阶代码示例
+
+#### 方案 A：使用 setdefault (内置方法)
+```python
+def group_by(s, fn):
+    grouped = {}
+    for i in s:
+        # setdefault(key, default): 
+        # 1. 若 key 不存在，将 key: [] 存入并返回 []
+        # 2. 若 key 存在，直接返回对应的列表
+        grouped.setdefault(fn(i), []).append(i)
+    return grouped
+```
+#### 方案 B: 使用defaultdict
+```python
+from collections import defaultdict
+
+def group_by(s, fn):
+    # 初始化时指定 factory 函数为 list
+    # 访问任何不存在的键都会自动创建一个新列表
+    grouped = defaultdict(list) 
+    for i in s:
+        grouped[fn(i)].append(i)
+    return dict(grouped)
+```
+# 08_Dictionary_Operations_Table.md
+
+### 7.3 常见字典操作表
+
+| 操作 | 语法 | 复杂度 | 备注 |
+| :--- | :--- | :--- | :--- |
+| **成员检查** | `key in d` | $O(1)$ | 检查的是键(key)而非值 |
+| **安全取值** | `d.get(key, default)` | $O(1)$ | 避免 KeyError 的推荐做法 |
+| **删除并返回** | `val = d.pop(key)` | $O(1)$ | 若键不存在可加默认值 `pop(k, def)` |
+| **合并字典** | `d1.update(d2)` | $O(M)$ | 将 d2 的内容覆盖合并到 d1 |
+| **视图获取** | `d.keys() / d.values()` | $O(1)$ | 返回的是动态视图，非列表 |
+| **清空** | `d.clear()` | $O(1)$ | 原地清空所有项 |
+
+> **CS61A 核心提示**：字典是**可变对象 (Mutable)**。在递归中传递字典时，所有递归层级共享同一个字典实例（除非显式使用 `.copy()`）。
