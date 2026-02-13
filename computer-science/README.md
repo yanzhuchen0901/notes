@@ -7,7 +7,7 @@
 ## 🎓 课程与内容
 
 - 🐍 [UC Berkeley CS61A - Structure and Interpretation of Computer Programs](UCB%20CS61A/)
-- 🧠 [微服务与系统设计](ms/)
+- 🧠 [MIT - The Missing Semester](ms/)
 
 ---
 

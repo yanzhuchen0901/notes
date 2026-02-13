@@ -4,4 +4,6 @@
 
 ## 📋 学习内容
 
-- [翻译与写作](English/CET-6/translation_and_writing1.md) - CET-6 翻译和作文练习
+- [六级词汇导论](English/CET-6/word1.md) - CET-6 六级第一次词汇课
+- [翻译与写作](English/CET-6/translation_and_writing1.md) - CET-6 六级第一次正课
+- [写作](English/CET-6/translation_and_writing2.md) - CET-6 六级第三次正课
