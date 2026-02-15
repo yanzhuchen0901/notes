@@ -14,3 +14,4 @@
 - [Generator](/computer-science/UCB%20CS61A/Generator.md)
 - [Object-Oriented Programming](/computer-science/UCB%20CS61A/Object-Oriented.md)
 - [lazy-evaluation](/computer-science/UCB%20CS61A/lazy_evaluation.md)
+- [Structure_Basic](/computer-science/UCB%20CS61A/Structure_Basic.md)
