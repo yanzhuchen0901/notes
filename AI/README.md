@@ -6,7 +6,7 @@
 
 ## 🎓 课程与内容
 
-- 🐍 [HuggingFace Itroduction](AI/huggingface.md)
+  - [Transformer Models](AI/transformer.md)
 
 ---
 
