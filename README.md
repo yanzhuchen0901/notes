@@ -20,7 +20,7 @@
 
 ### 🤖人工智能
 
-- **[HuggingFace_Itroduction](AI/)
+- **[人工智能](AI/)** - Artificial Intelligence - My road to SH ai lab 
 
 ---
 
