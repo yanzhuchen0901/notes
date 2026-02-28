@@ -152,31 +152,7 @@ ner("My name is Sylvain and I work at Hugging Face in Brooklyn.")
 - 编码器-解码器模型或序列对序列模型：适合需要输入的生成任务，如翻译或摘要。
 
 ## 1.The original architecture
-```mermaid
-graph TD
-    subgraph Encoder
-        A[Input Embedding] --> B[Add & Norm]
-        B --> C[Feed Forward]
-        C --> D[Add & Norm]
-        D --> E[Multi-head Attention]
-        E --> F[Add & Norm]
-        F --> G[Feed Forward]
-    end
-
-    subgraph Decoder
-        H[Output Embedding - Shifted Right] --> I[Add & Norm]
-        I --> J[Masked Multi-head Attention]
-        J --> K[Add & Norm]
-        K --> L[Feed Forward]
-        L --> M[Add & Norm]
-        M --> N[Linear]
-        N --> O[Softmax]
-    end
-
-    A --> B
-    G --> H
-    E --> J
-```
+![transformer](images/transformer.png)
 
 ## 2.architecture & checking point & model
 架构(**architecture**)：这是模型的骨架——每个层和模型中发生的每个作的定义。
