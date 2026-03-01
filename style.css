@@ -7,13 +7,7 @@
 }
 
 
-/* 全局强制文字为白色（覆盖所有元素） */
-
-html,
-body,
-body * {
-    color: #ffffff !important;
-}
+/* 避免全局通配符覆盖导致 Markdown 和代码高亮失效 */
 
 
 /* 全局颜色请通过明确选择器设置，避免使用通配符覆盖导致冲突 */
@@ -112,26 +106,52 @@ body {
 }
 
 .sidebar ul li a {
-    color: #ffffff;
+    color: #c9d1d9;
     border-left: 3px solid transparent;
     padding-left: 13px !important;
 }
 
 .sidebar ul li a:hover {
-    color: #3498db;
-    background-color: #333;
+    color: #79c0ff;
+    background-color: #30363d;
 }
 
 .sidebar ul li.active>a {
-    color: #3498db;
-    border-left: 3px solid #3498db;
-    background-color: #333;
+    color: #a5d6ff;
+    border-left: 3px solid #79c0ff;
+    background-color: #30363d;
     font-weight: 600;
+}
+
+.sidebar .sidebar-nav p,
+.sidebar .sidebar-nav li>p {
+    color: #c9d1d9;
+    font-weight: 600;
+}
+
+.sidebar ul li a,
+.sidebar ul li a:link,
+.sidebar ul li a:visited {
+    color: #e6edf3 !important;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a:focus {
+    color: #79c0ff !important;
+    background-color: #30363d !important;
+}
+
+.sidebar ul li.active>a,
+.sidebar ul li.active>a:link,
+.sidebar ul li.active>a:visited {
+    color: #a5d6ff !important;
+    border-left-color: #79c0ff !important;
+    background-color: #30363d !important;
 }
 
 .markdown-section {
     background-color: #1e1e1e;
-    color: #ffffff;
+    color: #c9d1d9;
     padding: 30px 40px;
     max-width: 900px;
     margin: 0 auto;
@@ -143,7 +163,7 @@ body {
 .markdown-section h4,
 .markdown-section h5,
 .markdown-section h6 {
-    color: #ffffff;
+    color: #f0f6fc;
     font-weight: 600;
     border-bottom-color: #555;
 }
@@ -154,7 +174,7 @@ body {
 }
 
 .markdown-section a {
-    color: #3498db;
+    color: #79c0ff;
     text-decoration: underline;
 }
 
@@ -162,24 +182,99 @@ body {
     opacity: 0.8;
 }
 
-.markdown-section code {
-    background-color: #2a2a2a;
-    color: #f1c40f;
+.markdown-section :not(pre)>code {
+    background-color: rgba(110, 118, 129, 0.4);
+    color: #f0f6fc;
     padding: 2px 6px;
     border-radius: 3px;
-    border: 1px solid #444;
+    border: 1px solid #30363d;
 }
 
 .markdown-section pre {
-    background-color: #2a2a2a;
-    border: 1px solid #444;
+    background-color: #0d1117;
+    border: 1px solid #30363d;
     border-radius: 4px;
 }
 
+.markdown-section pre code {
+    background-color: transparent;
+    color: #c9d1d9;
+    padding: 0;
+    border: none;
+}
+
+.markdown-section pre[class*="language-"],
+.markdown-section code[class*="language-"] {
+    color: #c9d1d9;
+    text-shadow: none;
+}
+
+.markdown-section pre code .token.comment,
+.markdown-section pre code .token.prolog,
+.markdown-section pre code .token.doctype,
+.markdown-section pre code .token.cdata {
+    color: #8b949e;
+}
+
+.markdown-section pre code .token.punctuation {
+    color: #c9d1d9;
+}
+
+.markdown-section pre code .token.property,
+.markdown-section pre code .token.tag,
+.markdown-section pre code .token.boolean,
+.markdown-section pre code .token.number,
+.markdown-section pre code .token.constant,
+.markdown-section pre code .token.symbol,
+.markdown-section pre code .token.deleted {
+    color: #79c0ff;
+}
+
+.markdown-section pre code .token.selector,
+.markdown-section pre code .token.attr-name,
+.markdown-section pre code .token.string,
+.markdown-section pre code .token.char,
+.markdown-section pre code .token.builtin,
+.markdown-section pre code .token.inserted {
+    color: #a5d6ff;
+}
+
+.markdown-section pre code .token.operator,
+.markdown-section pre code .token.entity,
+.markdown-section pre code .token.url,
+.markdown-section pre code .language-css .token.string,
+.markdown-section pre code .style .token.string,
+.markdown-section pre code .token.atrule,
+.markdown-section pre code .token.attr-value,
+.markdown-section pre code .token.keyword {
+    color: #ff7b72;
+}
+
+.markdown-section pre code .token.function,
+.markdown-section pre code .token.class-name {
+    color: #d2a8ff;
+}
+
+.markdown-section pre code .token.regex,
+.markdown-section pre code .token.important,
+.markdown-section pre code .token.variable {
+    color: #ffa657;
+}
+
+.markdown-section strong,
+.markdown-section b {
+    color: #f0f6fc;
+}
+
+.markdown-section em,
+.markdown-section i {
+    color: #c9d1d9;
+}
+
 .markdown-section blockquote {
-    border-left-color: #3498db;
-    color: #ffffff;
-    background-color: #262626;
+    border-left-color: #79c0ff;
+    color: #c9d1d9;
+    background-color: #161b22;
 }
 
 .markdown-section table {
@@ -196,15 +291,15 @@ body {
 
 .markdown-section table th,
 .markdown-section table td {
-    border: 1px solid #444;
+    border: 1px solid #30363d;
     padding: 10px;
-    color: #ecf0f1;
+    color: #c9d1d9;
 }
 
 .markdown-section table th {
-    background-color: #2a2a2a;
+    background-color: #161b22;
     font-weight: 600;
-    color: #ecf0f1;
+    color: #f0f6fc;
 }
 
 .main {
@@ -226,9 +321,14 @@ body {
 .markdown-section h5 a,
 .markdown-section h6 a {
     text-decoration: none;
-    color: #ffffff;
+    color: #f0f6fc;
     cursor: default;
     pointer-events: none;
+}
+
+.markdown-section .anchor,
+.markdown-section .anchor span {
+    color: #f0f6fc !important;
 }
 
 .markdown-section h1 a:hover,
@@ -237,7 +337,7 @@ body {
 .markdown-section h4 a:hover,
 .markdown-section h5 a:hover,
 .markdown-section h6 a:hover {
-    color: #ffffff;
+    color: #f0f6fc;
     opacity: 1;
 }
 
@@ -298,19 +398,19 @@ body {
 /* TOC 标题 */
 
 .page_toc p.title {
-    color: #ffffff !important;
+    color: #f0f6fc !important;
     font-weight: 600;
     font-size: 16px;
     margin-bottom: 15px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #444;
+    border-bottom: 2px solid #30363d;
 }
 
 
 /* TOC 链接样式 */
 
 .page_toc .anchor {
-    color: #ffffff !important;
+    color: #c9d1d9 !important;
     text-decoration: none;
     display: block;
     padding: 6px 0 6px 15px;
@@ -321,19 +421,43 @@ body {
 }
 
 .page_toc .anchor:hover {
-    color: #3498db !important;
-    background-color: #2a2a2a;
-    border-left-color: #3498db;
+    color: #79c0ff !important;
+    background-color: #30363d;
+    border-left-color: #79c0ff;
 }
 
 
 /* TOC 激活状态 */
 
 .page_toc .active {
-    color: #3498db !important;
+    color: #a5d6ff !important;
     font-weight: 600;
-    background-color: #333;
-    border-left-color: #3498db;
+    background-color: #30363d;
+    border-left-color: #79c0ff;
+}
+
+.page_toc a,
+.page_toc a:link,
+.page_toc a:visited,
+.page_toc .anchor,
+.page_toc .anchor:visited {
+    color: #e6edf3 !important;
+}
+
+.page_toc a:hover,
+.page_toc a:focus,
+.page_toc .anchor:hover,
+.page_toc .anchor:focus {
+    color: #79c0ff !important;
+    background-color: #30363d !important;
+}
+
+.page_toc .active,
+.page_toc .active:link,
+.page_toc .active:visited {
+    color: #a5d6ff !important;
+    border-left-color: #79c0ff !important;
+    background-color: #30363d !important;
 }
 
 
@@ -635,4 +759,69 @@ body {
     .sidebar-toggle-right {
         display: none;
     }
+}
+
+
+/* ==================== 最终颜色兜底（防主题覆盖） ==================== */
+
+.sidebar,
+.page_toc {
+    color: #e6edf3 !important;
+}
+
+.sidebar .sidebar-nav li>a,
+.sidebar .sidebar-nav li>a:link,
+.sidebar .sidebar-nav li>a:visited {
+    color: #e6edf3 !important;
+    opacity: 1 !important;
+}
+
+.sidebar .sidebar-nav li>a:hover,
+.sidebar .sidebar-nav li>a:focus {
+    color: #79c0ff !important;
+    background-color: #30363d !important;
+    opacity: 1 !important;
+}
+
+.sidebar .sidebar-nav li.active>a,
+.sidebar .sidebar-nav li.active>a:link,
+.sidebar .sidebar-nav li.active>a:visited {
+    color: #a5d6ff !important;
+    background-color: #30363d !important;
+    border-left-color: #79c0ff !important;
+    opacity: 1 !important;
+}
+
+.sidebar .sidebar-nav p,
+.sidebar .sidebar-nav li>p {
+    color: #e6edf3 !important;
+    opacity: 1 !important;
+}
+
+.page_toc a,
+.page_toc a:link,
+.page_toc a:visited,
+.page_toc .anchor,
+.page_toc .anchor:link,
+.page_toc .anchor:visited {
+    color: #e6edf3 !important;
+    opacity: 1 !important;
+}
+
+.page_toc a:hover,
+.page_toc a:focus,
+.page_toc .anchor:hover,
+.page_toc .anchor:focus {
+    color: #79c0ff !important;
+    background-color: #30363d !important;
+    opacity: 1 !important;
+}
+
+.page_toc .active,
+.page_toc .active:link,
+.page_toc .active:visited {
+    color: #a5d6ff !important;
+    background-color: #30363d !important;
+    border-left-color: #79c0ff !important;
+    opacity: 1 !important;
 }

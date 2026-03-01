@@ -1,5 +1,11 @@
 - 📒 [首页](/)
 
+- 🤖 AI
+  - [AI 总览](AI/)
+  - [Transformer 基础](AI/transformer.md)
+  - [Transformer 的使用](AI/the_use_of_transformer.md)
+  - [Jupyter 示例](AI/test.md)
+
 - 💻 计算机科学
   - [计算机科学总览](computer-science/)
   - [UC Berkeley CS61A](computer-science/UCB%20CS61A/)

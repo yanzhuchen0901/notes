@@ -1,5 +1,7 @@
 - [首页](/)
 
+- [AI](AI/)
+
 - [计算机科学](computer-science/)
 
 - [英文学习](English/)
