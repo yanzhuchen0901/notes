@@ -13,6 +13,11 @@
       进一步介绍了transformer架构的实现，尤其是其中tokenize的种类与微调方式，我们同时引入了不同的库来实现了一个transformer模型的架构
       你可以学到：tokenizer，model，auto assign
   - [Fine tune a pre-trained model](AI/fine_tune_a_model.md)
+      这里介绍了一个模型从训练到搭建的全过程
+      包括但不限于：限定arguements，完成预训练，加载database库
+  - [NLP task](AI/NLP.md)
+      介绍了相关的NLP任务
+      包括但不限于：NER，翻译，摘要，问答系统
     
 
 
