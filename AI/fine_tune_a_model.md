@@ -143,7 +143,7 @@ trainer.train()  # 开始训练
 trainer.save_model("path_to_save_model")  # 保存微调后的模型
 ```
 ```py
-完整的微调代码
+#完整的微调代码
 from transformers import AutoModelForSequenceClassification, Trainer, TrainingArguments, DataCollatorWithPadding
 import evaluate
 import numpy as np
