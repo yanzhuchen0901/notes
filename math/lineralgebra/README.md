@@ -8,3 +8,4 @@
 
 - [01 向量空间和数据表示](math/lineralgebra/vectorspace.md) - vector space
 - [02 矩阵运算和线性映射](math/lineralgebra/mapping.md) - mapping and calculating of matrix
+- [03 线性方程组和正交化](math/lineralgebra/orthonormal.md) - linear equation and orthonormal
