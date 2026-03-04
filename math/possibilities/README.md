@@ -5,7 +5,7 @@
 ---
 
 ## 📖 内容目录
-
+[概率论初步](possibilities/basic.md)
 
 ---
 
