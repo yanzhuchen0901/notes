@@ -57,6 +57,8 @@ $$
 
 若 $0\le b_n \le a_n$ 且 $\sum b_n$ 发散，则 $\sum a_n$ 发散。
 
+这种办法一般都会引向构造的想法，比如已知级数$\sum_{n=1}^\infty u_n^2$收敛，问$\sum_{n=1}^\infty \frac{u_n}{n}$
+
 2) **极限比较判别法**
 
 若 $a_n,b_n>0$ 且
@@ -64,20 +66,32 @@ $$
 \lim_{n\to\infty} \frac{a_n}{b_n}=c,\quad 0<c<\infty,
 $$
 则 $\sum a_n$ 与 $\sum b_n$ 同敛散。
+（注意一定要有极限才能用）
 
 3) **比值判别（d'Alembert）**
 
+朗达贝尔判别法
 对 $a_n>0$，令
 $$
 L=\limsup_{n\to\infty} \frac{a_{n+1}}{a_n}.
 $$
 若 $L<1$ 则收敛；若 $L>1$（或 $=\infty$）则发散；$L=1$ 不确定。
+本质思想：
+看每一项和后一项相比是发散还是收敛的
+比值判别用不同的级数之间相除来进行比较
+当$\frac{a_n}{b_n} = c$时，往往说明两个函数的敛散性相近
 
-4) **根值判别（Cauchy）**
+做一做：
+$$
+(1)\sum_{n=1}^{\infty} \frac{lnn}{n^p}
+(2)\sum_{n=1}^{\infty} \frac{ln{n!}}{n^p}
+$$
+
+1) **根值判别（Cauchy）**
 
 令
 $$
-\rho = \limsup_{n\to\infty} \sqrt[n]{a_n}.
+\rho = \limsup_{n\to\infty} \sqrt[n]{a_n}
 $$
 若 $\rho<1$ 则收敛；若 $\rho>1$ 则发散；$\rho=1$ 不确定。
 
