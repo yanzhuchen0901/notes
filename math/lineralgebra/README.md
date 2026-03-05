@@ -4,6 +4,10 @@
 
 ---
 
+先修要求：线性代数（甲）, python ,pytorch
+原帖链接[深度学习数学基础](https://zhuanlan.zhihu.com/p/25643286963?share_code=iQI97OhzfPTH&utm_psn=1954855207608496738) - by: 知乎 tomsheep
+
+---
 ## 🎓 课程与内容
 
 - [01 向量空间和数据表示](math/lineralgebra/vectorspace.md) - vector space

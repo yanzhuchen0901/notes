@@ -6,9 +6,7 @@
 
 ## 🎓 课程与内容
 
-
-
-- Hugging Face 快速上手的方法论：直接讲解模型搭建和调试，对算法方面覆盖较少
+- [Hugging Face 快速上手的方法论](https://huggingface.co/learn/llm-course/chapter1/1)：直接讲解模型搭建和调试，对算法方面覆盖较少
   - [Transformer Models](AI/transformer.md)
       介绍了基础的transformer架构和相关的语言处理技术
       包括但不限于：NLP,LLM,transformer架构，encode/decode

@@ -5,6 +5,7 @@
 - 学校：UC Berkeley
 - 语言：Python / Scheme
 - 重点：抽象、递归、高阶函数
+- 先修要求：无，建议可以学习Haravard cs50
 
 ---
 
