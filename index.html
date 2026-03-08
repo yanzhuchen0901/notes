@@ -17,8 +17,16 @@
         window.$docsify = {
             name: ' 学习笔记',
             repo: '',
-            loadSidebar: '_sidebar.md',
-            loadNavbar: '_navbar.md',
+            basePath: (function() {
+                const path = location.pathname;
+                return path.endsWith('/') ? path : path.replace(/\/[^/]*$/, '/');
+            })(),
+            loadSidebar: true,
+            loadNavbar: true,
+            alias: {
+                '/.*/_sidebar.md': '/_sidebar.md',
+                '/.*/_navbar.md': '/_navbar.md'
+            },
             subMaxLevel: 0,
             sidebarDisplayLevel: 1,
             homepage: 'README.md',
@@ -61,13 +69,17 @@
         }
 
         // 监听页面内容变化，重新禁用新添加的标题链接
-        const observer = new MutationObserver(() => {
-            disableHeadingLinks();
-        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new MutationObserver(() => {
+                disableHeadingLinks();
+            });
 
-        observer.observe(document.body, {
-            childList: true,
-            subtree: true
+            if (document.body) {
+                observer.observe(document.body, {
+                    childList: true,
+                    subtree: true
+                });
+            }
         });
 
         // 侧边栏收缩功能

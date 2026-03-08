@@ -6,9 +6,9 @@
 
 ## 📖 内容目录
 
-[基于机器学习的线性代数](math/lineralgebra/)
-[二元积分学](math/two-para-cal/)
-[概率论与数理统计](math/possibilities/)
+[基于机器学习的线性代数](lineralgebra/)
+[二元积分学](two-para-cal/)
+[概率论与数理统计](possibilities/)
 
 waited:
 常微分方程
