@@ -10,4 +10,4 @@
 
 基于 ZJU 微积分（甲）II
 
-- [级数（series）](two-para-cal/series.md)
+- [级数（series）](series.md)
