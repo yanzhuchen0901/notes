@@ -1,0 +1,15 @@
+# Python virtual env
+.venv/
+
+# Python caches
+__pycache__/
+*.py[cod]
+*.pyd
+.ipynb_checkpoints/
+
+# Large local datasets (downloaded/generated)
+math/lineralgebra/data/
+
+# Code notebooks/scripts not used for front-end rendering
+*.ipynb
+*.py
